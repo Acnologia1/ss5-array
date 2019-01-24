@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Bin</title>
+    <style>
+        body {padding-top : 50px}
+    </style>
+</head>
+<body>
+<body>
+<input id="form1" name="form1" method="post" action="">
+
+    <input type="text" name="" id="text" ></input>
+
+    <input type="button" name="2" id="btnAdd" value="Add"  onclick = "add_element_to_array();" ></input>
+
+    <input type="button" name="3" id="btnDisplay" value="Display" onclick ="display_array();"> </input>
+    <div  id ="result"></div>
+</form>
+</body>
+
+
+<script>
+    var x =0;
+    var array = Array();
+    function add_element_to_array(){
+        array[x] =document.getElementById("text").value;
+        alert("Element:" +array[x] + "Added at index" +x);
+        x++;
+        document.getElementById("text").value = "";
+    }
+    function display_array(){
+        var e ="<hr/>";
+        for(var i = 0 ; i <array.length;i++)
+        {
+            e +="Element" +i+"=" +array[i] +"<br/>";
+        }
+        document.getElementById("result").innerHTML = e ;
+    }
+</script>
+</body>
+</html>
